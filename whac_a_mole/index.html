@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="./style.css">
+	<title>Whac A Mole</title>
+</head>
+<body>
+	<div class="game-wrap">
+		<div class="game-header">Whac-a-mole</div>
+		<div class="game-tip game-tip_1">Test your skill.How many boxes(moles) can you check(hit) in 30 seconds?</div>
+
+		<div class="ctrl-panel-wrap">
+			<div class="ctrl-panel">
+				<div class="ctrl-item ctrl-btn">Start Game | Stop Game</div>
+				<div class="ctrl-item ctrl-game-info">Game Ready</div>
+			</div>
+
+			<div class="ctrl-panel">
+				<div class="ctrl-item">
+					<label>Time:</label>
+					<label><span class="ctrl-time">30</span><span>&nbsp;s</span></label>
+				</div>
+
+				<div class="ctrl-item">
+					<label>Score:</label>
+					<label><span class="ctrl-score">0</span></label>
+				</div>
+			</div>
+		</div>
+
+		<div class="game-body">
+			
+		</div>
+		<div class="instruction">
+			<div class="instruction__h">Instructions:</div>
+			<p class="instruction__p">1. click on the radio buttons(moles) as they are selected randomly by the computer.</p>
+			<p class="instruction__p">2. 1 point per hit, minus 1 point per miss.</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>

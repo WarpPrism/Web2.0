@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: auto;
+
+	overflow-x: hidden;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.game-wrap {
+	width: 900px;
+	height: auto;
+	margin: 30px auto;
+}
+
+.game-header {
+	font-size: 30px;
+	font-weight: normal;
+	text-align: center;
+	padding: 10px;
+}
+.game-tip_1 {
+	font-size: 20px;
+	text-align: center;
+	padding: 5px;
+}
+
+.instruction {
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 16px;
+}
+.instruction__h {
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.instruction__p {
+	padding-left: 20px;
+}
+
+.ctrl-panel-wrap {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -o-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.ctrl-panel {
+	margin: 0 30px;
+}
+.ctrl-item {
+	padding: 3px;
+	vertical-align: middle;
+}
+.ctrl-btn {
+	border-radius: 5px;
+	border: solid 1px #000;
+	cursor:pointer;
+}
+.ctrl-btn:hover {
+	background: #aaa;
+	border: solid 1px #aaa;
+	color: #fff;
+}
+
+.game-body {
+	border-top: solid 1px #000;
+	border-bottom: solid 1px #000;
+	width: 320px;
+	min-height: 192px;
+	box-sizing: border-box;
+	text-align: center;
+	margin: 30px auto;
+	padding-top: 10px;
+}
+
+.ctrl-radio {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	box-shadow: inset 1px 1px 5px #aaa;
+	margin-bottom: 10px;
+		margin-right: 10px;
+		cursor: pointer;
+}
+
+.ctrl-radio_mouse {
+	background: #aaa;
+}
+
+.ctrl-time, .ctrl-time+span, .ctrl-score {
+	color: #f10;
+}
