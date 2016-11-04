@@ -1,0 +1,156 @@
+body {
+	background: url(./assets/background.png);
+	background-attachment: fixed;
+	font-size: 8pt;
+	font-family:  Verdana, Tahoma, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.clearfix:before, .clearfix:after {
+	content: '';
+	display: table;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+
+/******************************************/
+
+.banner {
+	background: url(./assets/bannerbackground.png);
+	text-align: center;
+	height: 50px;
+}
+
+.movie-name {
+	width: 100%;
+	font-size: 24pt;
+	font-weight: bold;
+	font-family: Tahoma, Verdana, sans-serif;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.page-body {
+	width: 800px;
+	margin: 0 auto;
+	border: solid 4px gray;
+}
+
+/******************************************/
+
+.review-section {
+	width: 550px;
+	float: left;
+}
+
+.review-section_header {
+	background: url(./assets/rottenbackground.png);
+	height: 83px;
+}
+
+.review-section_header span.mainfs {
+	color: red;
+	font-size: 48pt;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+.review-section_header span.subfs {
+	color: #fff;
+	font-size: 8pt;
+	position: relative;
+	top: -10px;
+	line-height: 1;
+}
+
+.review-section_column {
+	width: 47%;
+	margin: 1.5%;
+	float: left;
+}
+
+.review-section_column .quote-box {
+	font-size: 8pt;
+	font-weight: bold;
+	background-color: #e1d697;
+	border: solid 2px gray;
+	padding: 8px;
+	box-sizing: border-box;
+	min-height: 45px;
+}
+
+.review-section_column .quote-box img {
+	float: left;
+	margin-right: 5px;
+}
+
+.review-section_column .reviewer-info {
+	margin-top: 10px;
+	margin-bottom: 3em;
+}
+
+.review-section_column .reviewer-info img {
+	float: left;
+	margin-right: 5px;
+}
+
+.review-section_column .reviewer-info span {
+	font-style: italic;
+}
+/******************************************/
+
+.info-section {
+	width: 250px;
+	float: right;
+	background-color: #a2b964;
+	font-size: 8pt;
+	font-family: Arial, sans-serif;
+}
+
+img.info-section_movie-post {
+	width: 100%;
+}
+
+.info-section .info-list {
+	padding: 10px;
+}
+.info-list dt {
+	font-weight: bold;
+}
+.info-list dd {
+	padding-left: 30px;
+	margin-bottom: 1em;
+}
+
+/******************************************/
+
+.footer-section {
+	width: 800px;
+	box-sizing: border-box;
+	float: left;
+	padding: 5px;
+	background-color: #a2b964;
+	text-align: center;
+}
+
+.w3c-item {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	display: block;
+}
+.item1 {
+	bottom: 35px;
+}

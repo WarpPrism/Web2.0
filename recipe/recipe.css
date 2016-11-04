@@ -1,0 +1,47 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	color: #404040;
+	font-weight: 11pt;
+	font-family:  Georgia, Garamond;
+	background: url(./imgs/silverware.jpg);
+	background-attachment: fixed;
+}
+a {
+	color: #a4a400;
+}
+.recipe-wrapper {
+	padding: 10px;
+}
+.header {
+	color: #a4a400;
+	background: #f0f0f0;
+	text-decoration: underline;
+	font-family: Century Gothic, Futura, Verdana;
+	letter-spacing: 0.2em;
+}
+.recipe-header {
+	font-weight: bold;
+	font-size: 22pt;
+	text-align: center;
+}
+.section-header {
+	font-size: 18pt;
+}
+.info-list {
+	list-style: none;
+	margin:  20px 0 0 0;
+	padding: 0;
+}
+.incredient-list {
+	list-style-image: url(./imgs/pie_icon.gif);
+}
+.user-quote {
+	background: #ffffc8;
+	margin: 15px 50px;
+}
+.user-quote p {
+	font-style: italic;
+	margin: 0;
+}

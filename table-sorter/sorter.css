@@ -1,0 +1,56 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	padding: 10px;
+	font-size: 16px;
+	color: #333;
+}
+h1 {
+	font-size: 25px;
+}
+.sort-table-name {
+	margin: 15px 0;
+	font-size: 20px;
+}
+.sort-table {
+	border: solid 1.5px #ccc;
+	border-collapse: collapse;
+}
+.sort-table th {
+	background-color: #031b7f;
+	color: #fff;
+	border: solid 1.5px #ccc;
+	text-align: left;
+	padding: 5px;
+	cursor: pointer;
+	min-width: 135px;
+}
+.sort-table th:hover {
+	cursor: pointer;
+	background-color: #a4b0fc;
+}
+.sort-table th.ascend {
+	background-color: #a4b0fc;
+	background-image: url('./ascend.png');
+	background-repeat: no-repeat;
+	background-position: 90%;
+}
+.sort-table th.descend {
+	background-color: #a4b0fc;
+	background-image: url('./descend.png');
+	background-repeat: no-repeat;
+	background-position: 90%;
+}
+.sort-table td {
+	border: solid 1.5px #ccc;
+	padding: 5px;
+}
+.sort-table tbody tr:nth-child(odd) td {
+	background-color: #fff;
+}
+.sort-table tbody tr:nth-child(even) td {
+	background-color: #ddd;
+}
