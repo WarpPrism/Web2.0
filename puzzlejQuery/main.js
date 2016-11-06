@@ -1,21 +1,20 @@
 var G = {};
 G.clickType = 'normal';
 
-window.onload = function() {
+$(document).ready(function() {
     var puzzleArr = initPuzzles();
     var blank = initBlank();
-    console.log(puzzleArr, blank);
 
     for (var i = 0; i < puzzleArr.length; i++) {
         (function(ii) {
-            puzzleArr[ii].ele.addEventListener('click', function(e) {
+            $(puzzleArr[ii].ele).click(function(e) {
                 var cur_pos = puzzleArr[ii].current_pos;
                 if (cur_pos - 1 == blank.current_pos && cur_pos % 4 == 1) {
                     return;
                 }
-                if (cur_pos + 1 == blank.current_pos && cur_pos % 4 == 0) {
-                    return;
-                }
+				if (cur_pos + 1 == blank.current_pos && cur_pos % 4 == 0) {
+					return;
+				}
                 if ((cur_pos - 1 != blank.current_pos) &&
                     (cur_pos + 1 != blank.current_pos) &&
                     (cur_pos - 4 != blank.current_pos) &&
@@ -50,24 +49,24 @@ window.onload = function() {
 
                     p.then(function() {
                         if (isComplete(blank, puzzleArr) && G.clickType !== 'mess') {
-                            alert('恭喜你拼完了！');
+                            alert('恭喜成功还原拼图！');
                         }
                     })
 
                 }
-            }, false);
+            });
         })(i);
     }
 
     document.querySelector('.ctrl-btn').addEventListener('click', function(e) {
         messThePuzzle(blank, puzzleArr);
     }, false);
-}
+});
 
 function initPuzzles() {
     // 将所有拼图块封装为一个对象，并返回数组
     var pzArr = [];
-    var puzzleItems = document.querySelectorAll('.puzzle-item');
+    var puzzleItems = $('.puzzle-item');
     for (var i = 0; i < puzzleItems.length; i++) {
         var puzzleObj = {};
         puzzleObj.id = i + 1;
