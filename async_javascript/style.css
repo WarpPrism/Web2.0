@@ -1,0 +1,334 @@
+/* author: 13331371 zhoujihao;*/
+
+
+/* 2016-11-20 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.project-title {
+    color: #777;
+    text-align: center;
+    font-weight: normal;
+    padding: 10px;
+}
+
+#at-plus-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#bottom-positioner {
+    width: 500px;
+    height: 300px;
+    overflow: visible;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#button {
+    width: 0;
+    height: 0;
+    position: static;
+}
+
+@keyframes start {
+    0% {
+        transform: rotateX(180deg);
+        left: -1400px;
+        top: 0
+    }
+    100% {
+        transform: rotateX(0deg);
+        left: 0;
+        top: 0;
+    }
+}
+
+.apb {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transition: all .3s ease-in-out .6s;
+    -moz-transition: all .3s ease-in-out .6s;
+    -ms-transition: all .3s ease-in-out .6s;
+    -o-transition: all .3s ease-in-out .6s;
+    transition: all .3s ease-in-out .6s;
+    animation: start 1s ease-in-out;
+}
+
+.apb .icon {
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/images/atplus_white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #777;
+    background-size: 30px;
+    border-radius: 50%;
+    -webkit-transition: all .3s ease-in-out .6s;
+    -moz-transition: all .3s ease-in-out .6s;
+    -ms-transition: all .3s ease-in-out .6s;
+    -o-transition: all .3s ease-in-out .6s;
+    transition: all .3s ease-in-out .6s;
+}
+
+#button:hover .apb {
+    width: 60px;
+    height: 60px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#button:hover .apb .icon {
+    background-image: url(./assets/images/atplus_green.png);
+    background-position: center;
+    background-size: 50px;
+    background-color: rgba(48, 63, 159, 1);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#button:hover #control-ring-container {
+    width: 200px;
+    height: 200px;
+}
+
+#button:hover .button {
+    opacity: 1;
+}
+
+#button:hover .mask.button {
+    top: -120px;
+    left: -150px;
+}
+
+#button:hover .history.button {
+    top: -20px;
+    left: -180px;
+}
+
+#button:hover .message.button {
+    top: 80px;
+    left: -150px;
+}
+
+#button:hover .setting.button {
+    top: 160px;
+    left: -60px;
+}
+
+#button:hover .sign.button {
+    top: 135px;
+    left: 30px;
+}
+
+
+/* Ring Menu */
+
+#control-ring-container,
+#control-ring {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    opacity: 0;
+    color: #079e6e;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    background-color: #31429d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.button_disable {
+    background-color: #777;
+}
+
+.button:hover {
+    color: #fff;
+}
+
+.num {
+    color: #fff;
+    background-color: #c33;
+    font-weight: bold;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    opacity: 0;
+}
+
+.num_show {
+    opacity: 1;
+}
+
+
+/* Info-Bar */
+
+#info-bar {
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: #31429d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 1000;
+    overflow: hidden;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+#info-bar.info-bar_disable {
+    background-color: #777;
+}
+#info-bar .info {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+#info-bar .info .result {
+    width: 100%;
+    height: 50px;
+    color: #079e6e;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#button:hover #info-bar {
+    width: 120px;
+    height: 120px;
+    opacity: 1;
+    top: -250px;
+}
+
+#button:hover #info-bar img {
+    opacity: 1;
+    visibility: visible;
+}
+
+#button:hover #info-bar span {
+    opacity: 1;
+    visibility: visible;
+}
+
+#button:hover #info-bar .page.user img {
+    left: 35px;
+    top: 15px;
+}
+
+#button:hover #info-bar .page.user span {
+    color: #fff;
+    left: 65px;
+    top: 20px;
+}
+
+#button:hover #info-bar .page.comment img {
+    left: 20px;
+    top: 47px;
+}
+
+#button:hover #info-bar .page.comment span {
+    font-size: 30px;
+    color: #fff;
+    left: 60px;
+    top: 45px;
+}
+
+#button:hover #info-bar .mine.posted img {
+    left: 20px;
+    top: 80px;
+}
+
+#button:hover #info-bar .mine.posted span {
+    color: #079e6e;
+    left: 45px;
+    top: 83px;
+}
+
+#button:hover #info-bar .mine.like img {
+    left: 62px;
+    top: 80px;
+}
+
+#button:hover #info-bar .mine.like span {
+    color: #079e6e;
+    left: 89px;
+    top: 83px;
+}
