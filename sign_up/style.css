@@ -58,7 +58,6 @@ label {
 }
 
 .btn {
-    display: inline-block;
     float: right;
     margin: 0 5px;
     padding: 2px 10px;
