@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    .wrap
+        header.page-title 用户注册
+        .form-wrap
+            .form-group
+                label(for="username") 用户名：
+                input(type="text" name="username")#username.content-item
+                p.error.form-error
+            .form-group
+                label(for="password") 密码：
+                input(type="password" name="password")#password.content-item
+                p.error.form-error                
+            .form-group(for="password2")
+                label(for="password2") 确认密码：
+                input(type="password" name="password2")#password2.content-item
+                p.error.form-error                    
+            .form-group
+                label(for="studentId") 学号：
+                input(type="text" name="studentId")#studentId.content-item
+                p.error.form-error                    
+            .form-group
+                label(for="phoneNumber") 电话：
+                input(type="text" name="phoneNumber")#phoneNumber.content-item
+                p.error.form-error                    
+            .form-group
+                label(for="email") 邮箱：
+                input(type="text" name="email")#email.content-item
+                p.error.form-error                    
+            .form-ctrl.clearfix
+                a(href="javascript:;").btn.submit-btn 提交
+                a(href="javascript:;").btn.reset-btn 重置
+        .page-link
+            a(href="/login") 登录 >>
+        
+        .modal
+            .modal-header
+                header
+            .modal-body
+                p.modal-body-text
+            .modal-footer.clearfix
+                a(href="javascript:;").modal-btn.btn 确定
+    script(type="text/javascript" src="javascripts/regist.js")

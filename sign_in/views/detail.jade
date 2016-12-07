@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+    .wrap
+        header.page-title 用户详情 
+        .form-wrap
+            .form-group
+                label(for="username") 用户名：
+                span#username.content-item.detail-item #{username}
+            .form-group
+                label(for="studentId") 学号：
+                span#studentId.content-item.detail-item #{studentId}
+            .form-group
+                label(for="phoneNumber") 电话：
+                span#phoneNumber.content-item.detail-item #{phoneNumber}
+            .form-group
+                label(for="email") 邮箱：
+                span#email.content-item.detail-item #{email}
+            .form-ctrl.clearfix
+                a(href="javascript:;").btn.exit-btn 退出
+        if (authError)
+            p.error.auth-error 权限错误！用户只能够访问自己的数据！
+    script(type="text/javascript" src="javascripts/detail.js")
+

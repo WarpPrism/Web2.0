@@ -25,8 +25,9 @@ window.onload = function() {
         formData.email = G.emailEle.value;
 
         var xhr = createXHR();
-        xhr.open('POST', 'http://localhost:8000', true);
-        xhr.send(formData);
+        xhr.open('POST', 'http://localhost:8000/', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(JSON.stringify(formData));
 
         xhr.onreadystatechange = function() {
             if (xhr.status == 200 && xhr.readyState == 4) {

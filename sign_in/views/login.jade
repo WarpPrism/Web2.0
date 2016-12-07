@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    .wrap
+        header.page-title 用户登录
+        .form-wrap
+            .form-group
+                label(for="username") 用户名：
+                input(type="text" name="username")#username.content-item
+                p.error.form-error
+            .form-group
+                label(for="password") 密码：
+                input(type="password" name="password")#password.content-item
+                p.error.form-error                
+            .form-ctrl.clearfix
+                a(href="javascript:;").btn.submit-btn 登录
+                a(href="javascript:;").btn.reset-btn 重置
+        .page-link
+            a(href='/regist') 没有账户？注册 >>
+        
+        .modal
+            .modal-header
+                header
+            .modal-body
+                p.modal-body-text
+            .modal-footer.clearfix
+                a(href="javascript:;").modal-btn.btn 确定
+    
+    script(type="text/javascript" src="javascripts/fn.js")
+    script(type="text/javascript" src="javascripts/login.js")
