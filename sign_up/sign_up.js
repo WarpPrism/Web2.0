@@ -50,6 +50,7 @@ function exists(username) {
         var filedata = fs.readFileSync('users.json', 'utf8');
         if (filedata == '') {
             filedata = '[]';
+            return false;
         }
         var usersArr = JSON.parse(filedata);
         for (var i = 0, len = usersArr.length; i < len; i++) {
